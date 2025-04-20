@@ -13,6 +13,7 @@ import NewsCard from './assets/components/NewsCard.jsx';
 import NewsPopup from './assets/components/NewsPopup.jsx';
 
 function App() {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [newsList, setNewsList] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedNews, setSelectedNews] = useState(null);
@@ -35,7 +36,7 @@ function App() {
   const fetchNews = async (query = '') => {
     try {
       // Make a GET request to our backend with an optional `location` query param
-      const res = await axios.get('http://localhost:5000/api/news', {
+      const res = await axios.get(`${API_URL}/api/news`, {
         params: { location: query }
       });
       // console.log('Fetched news:', res.data);
