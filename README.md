@@ -18,3 +18,11 @@ cd backend
 npm install
 echo "NEWS_API_KEY=your_key_here" > .env
 npm start
+```
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
