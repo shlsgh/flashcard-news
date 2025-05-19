@@ -1,6 +1,6 @@
 # Flashcard News 📰
 
-A project using Vite + React + Material UI with real-time news via NewsAPI.
+A project using Express Js + React + Material UI with real-time news via NewsAPI.
 
 ## Features
 
@@ -16,6 +16,7 @@ A project using Vite + React + Material UI with real-time news via NewsAPI.
 ```bash
 cd backend
 npm install
+echo "PORT=port_for_api" > .env
 echo "NEWS_API_KEY=your_key_here" > .env
 npm start
 ```
@@ -24,5 +25,6 @@ npm start
 ```bash
 cd frontend
 npm install
+echo "VITE_API_URL=backend_api_url" > .env
 npm run dev
 ```
